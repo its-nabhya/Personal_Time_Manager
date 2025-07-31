@@ -26,8 +26,8 @@ A simple, web-based personal assistant combining a conversational AI chatbot (po
 1. **Clone this repository**
 
     ```
-    git clone https://github.com/yourusername/timemgmt-gemini-chatbot.git
-    cd timemgmt-gemini-chatbot
+    git clone https://github.com/its-nabhya/Personal_Time_Manager.git
+    cd Personal_Time_Manager
     ```
 
 2. **Add Your API Key**
@@ -36,7 +36,7 @@ A simple, web-based personal assistant combining a conversational AI chatbot (po
     - Replace `YOUR_API_KEY` with your Gemini API key:
 
     ```
-    const endpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=YOUR_API_KEY';
+    const endpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-pro:generateContent?key=ENTER_YOUR_GEMINI_API_KEY';
     ```
 
 3. **Run a Local Server**
@@ -80,7 +80,27 @@ For production, use a backend to keep credentials secure.
 
 ## License
 
-MIT License (add your details as needed).
+MIT License 
+
+Copyright (c) 2025 Nabhya Parsramka
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
 ## Acknowledgements
 
