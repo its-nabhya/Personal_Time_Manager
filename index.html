@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Xompatible" content="ie-edge">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Clock, alarm, timer</title>
+</head>
+    <body>
+  <div class="container">
+    <h1>🕒 Clock, Timer & Alarm</h1>
+    
+    <!-- Local Time Clock -->
+    <section class="card">
+      <h2>Local Time</h2>
+      <div class="clock-display" id="clock">00:00:00</div>
+      <div class="date-display" id="date">Monday, 01 January 2025</div>
+    </section>
+
+<section class="card">
+      <h2>Timer</h2>
+      <div class="timer-display" id="timer">
+          <div class="timer-controls" id="timer-inputs">
+              <input type="number" id="timer-hours" min="0" max="23" placeholder="HH" aria-label="Hours">
+              <input type="number" id="timer-minutes" min="0" max="59" placeholder="MM" aria-label="Minutes">
+              <input type="number" id="timer-seconds" min="0" max="59" placeholder="SS" aria-label="Seconds">
+            </div>
+        <div id="timer-countdown" style="display:none;font-size:2rem;"></div>
+        <button id="start-timer">Start</button>
+        <button id="pause-timer" disabled>Pause</button>
+        <button id="reset-timer">Reset</button>
+      </div>
+    </section>
+
+     <section class="card">
+      <h2>Select Sound</h2>
+      <div class="alarm-controls">
+        <label for="alarm-sound-select" class="block text-text-secondary text-base font-semibold mb-2">Choose Sound:</label>
+        <select id="alarm-sound-select" class="w-full p-2 border border-gray-300 rounded-md bg-accent-light text-text-main">
+          <!-- Options will be dynamically populated by JavaScript -->
+        </select>
+      </div>
+    </section>
+
+    <!-- Alarm -->
+    <section class="card">
+      <h2>Alarm</h2>
+      <div class="alarm-controls">
+        <input type="time" id="alarm-time" placeholder="Set Alarm Time">
+        <button id="set-alarm">Set Alarm</button>
+        <button id="clear-alarm">Clear Alarm</button>
+      </div>
+      <div id="alarm-status">No alarm set.</div>
+    </section>
+  </div>
+
+  <div class="card">
+  <h2>Time Management Assistant</h2>
+  <div class="chatbox" id="chatbox"></div>
+  <div class="chat-input-controls">
+    <input type="text" id="chat-input" placeholder="Ask me about your schedule, tasks, or time management..."/>
+    <button id="send-btn">Send</button>
+  </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+
+</html>

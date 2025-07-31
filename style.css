@@ -1,0 +1,204 @@
+/* body{
+    background-color: #212121;
+    color: #ffff;
+} */
+
+:root {
+  --bg-main: #181a20;
+  --bg-card: #23262f;
+  --accent: #ff904f;
+  --accent-light: #5a3e28;
+  --text-main: #f5f6fa;
+  --text-secondary: #b1b5c3;
+  --danger: #ff4f4f;
+  --success: #4fff8c;
+  --hover: #4f9eff;
+  --border-radius: 18px;
+  --shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 400px;
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--accent);
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.card {
+  background: var(--bg-main);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  color: var(--accent);
+  margin-bottom: 1.2rem;
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.clock-display, .timer-display {
+  font-size: 2.5rem;
+  font-family: 'Orbitron', monospace;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  letter-spacing: 2px;
+  color: var(--text-main);
+}
+
+.date-display {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.timer-controls, .alarm-controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+input[type="number"], input[type="time"] {
+  background: var(--accent-light);
+  color: var(--text-main);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  width: 60px;
+  outline: none;
+  text-align: center;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  background: var(--accent);
+  color: var(--text-main);
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: var(--hover);
+  color: var(--bg-main);
+}
+
+#alarm-status {
+  margin-top: 1rem;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+@media (max-width: 500px) {
+  .container {
+    max-width: 98vw;
+    padding: 0.5rem;
+  }
+  .card {
+    padding: 1rem 0.5rem 1.2rem 0.5rem;
+  }
+}
+
+input[type="number"],
+input[type="time"],
+select { 
+  background: var(--accent-light);
+  color: var(--text-main);
+  border: none; 
+  border-radius: 8px;
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  outline: none;
+  text-align: center;
+  -webkit-appearance: none; /* Remove default arrow on WebKit browsers */
+  -moz-appearance: none;    /* Remove default arrow on Firefox */
+  appearance: none;         /* Remove default arrow */
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23f5f6fa" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>'); /* Custom arrow */
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+  background-size: 1.2em;
+  padding-right: 2.5rem; /* Make space for the custom arrow */
+  cursor: pointer;
+}
+
+select#alarm-sound-select {
+    width: 100%; 
+    text-align: left; 
+    padding-left: 1rem; 
+}
+
+.chatbox {
+  height: 280px;
+  overflow-y: auto;
+  background: var(--bg-main);
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.chat-message {
+  margin-bottom: 0.7rem;
+  padding: 0.6rem;
+  border-radius: 12px;
+  max-width: 85%;
+}
+.chat-message.user {
+  background: var(--accent-light);
+  color: var(--text-main);
+  align-self: flex-end;
+}
+.chat-message.bot {
+  background: var(--bg-card);
+  color: var(--accent);
+  align-self: flex-start;
+}
+.chat-input-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+#chat-input {
+  flex: 1;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: none;
+}
+#send-btn {
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: var(--text-main);
+  cursor: pointer;
+}
